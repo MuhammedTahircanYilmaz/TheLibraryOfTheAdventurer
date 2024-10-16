@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheLibraryOfTheAdventurer.Model\TheLibraryOfTheAdventurer.Model.csproj" />
+    <ProjectReference Include="..\TheLibraryOfTheAdventurer.Repository\TheLibraryOfTheAdventurer.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
