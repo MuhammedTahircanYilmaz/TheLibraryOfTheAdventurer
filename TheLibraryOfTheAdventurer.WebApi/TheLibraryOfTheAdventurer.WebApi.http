@@ -1,0 +1,6 @@
+@TheLibraryOfTheAdventurer.WebApi_HostAddress = http://localhost:5118
+
+GET {{TheLibraryOfTheAdventurer.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
