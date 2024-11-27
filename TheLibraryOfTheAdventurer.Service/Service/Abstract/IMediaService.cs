@@ -1,15 +1,12 @@
 ﻿using Core.Entities.ReturnModels;
+using TheLibraryOfTheAdventurer.Model.Dtos.Medias.Response;
 using TheLibraryOfTheAdventurer.Model.Entities;
 using TheLibraryOfTheAdventurer.Model.Entities.Medias.Requests;
-using TheLibraryOfTheAdventurer.Model.Entities.Medias.Response;
+using TheLibraryOfTheAdventurer.Model.Enums;
 
 namespace TheLibraryOfTheAdventurer.Service.Service.Abstract;
 
-public interface IMediaService
+public interface IMediaService 
 {
-    ReturnModel<MediaResponseDto> Add(AddMediaRequestDto dto);
-    ReturnModel<MediaResponseDto> Update(UpdateMediaRequestDto dto);
-    ReturnModel<MediaResponseDto> Delete(Media media);
-    ReturnModel<IQueryable<MediaResponseDto>> GetAll();
-    ReturnModel<MediaResponseDto> GetById(Guid id);
+    ReturnModel<List<MediaResponseDto>> GetAllByStatus(Status status);
 }

@@ -1,4 +1,4 @@
-﻿using Core.Repository;
+﻿using Core.Repository.Concrete;
 using TheLibraryOfTheAdventurer.Model.Entities;
 using TheLibraryOfTheAdventurer.Repository.Contexts;
 using TheLibraryOfTheAdventurer.Repository.Repositories.Abstract;

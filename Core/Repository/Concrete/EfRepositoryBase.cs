@@ -1,7 +1,9 @@
 ﻿using Core.Entities;
+using Core.Repository.Abstract;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
-namespace Core.Repository;
+namespace Core.Repository.Concrete;
 
 public abstract class EfRepositoryBase<TContext, TEntity, TId> : IRepository<TEntity, TId>
     where TEntity : Entity<TId>, new()
@@ -36,9 +38,14 @@ public abstract class EfRepositoryBase<TContext, TEntity, TId> : IRepository<TEn
         return entity;
     }
 
-    public IQueryable<TEntity> GetAll()
+    public List<TEntity> GetAll(Expression<Func<TEntity,bool>>? filter = null)
     {
-        return Context.Set<TEntity>().AsQueryable();
+        IQueryable<TEntity> query = Context.Set<TEntity>();
+        if (filter is not null)
+        {
+            query = query.Where(filter);
+        }
+        return query.ToList();
     }
 
     public TEntity? GetById(TId id)

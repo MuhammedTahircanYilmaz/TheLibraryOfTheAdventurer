@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\TheLibraryOfTheAdventurer.Model\TheLibraryOfTheAdventurer.Model.csproj" />
     <ProjectReference Include="..\TheLibraryOfTheAdventurer.Repository\TheLibraryOfTheAdventurer.Repository.csproj" />
   </ItemGroup>

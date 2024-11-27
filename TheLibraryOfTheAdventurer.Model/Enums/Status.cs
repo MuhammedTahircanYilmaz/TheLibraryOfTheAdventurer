@@ -1,4 +1,4 @@
-﻿namespace TheLibraryOfTheAdventurer.Model.Entities.Enums;
+﻿namespace TheLibraryOfTheAdventurer.Model.Enums;
 
 public enum Status
 {
